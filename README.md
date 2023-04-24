@@ -12,7 +12,7 @@ The `BezierFootTrajectoryGenerator` class is based on the paper ["Leg Trajectory
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/a_akmsk/foot_trajectory.git
+git clone https://github.com/aakmsk/foot_trajectory.git
 ```
 
 2. Install 

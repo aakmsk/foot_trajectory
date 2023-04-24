@@ -95,7 +95,7 @@ class TrajectoryAnimation:
     def __init__(self, t, trajectory, save_name, axis_limits=None, cmap="jet", grid=True):
         if axis_limits is None:
             axis_limits = (-0.75, 0.75, -0.25, 1.25)
-        if t=None:
+        if t is None:
             interval = 100
         else:
             interval = 1000 * (np.max(t)-np.min(t)) / len(t)

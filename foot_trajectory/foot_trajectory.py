@@ -92,9 +92,13 @@ class BezierFootTrajectoryGenerator(FootTrajectoryGenerator):
 
 
 class TrajectoryAnimation:
-    def __init__(self, trajectory, save_name, axis_limits=None, cmap="jet", grid=True):
+    def __init__(self, t, trajectory, save_name, axis_limits=None, cmap="jet", grid=True):
         if axis_limits is None:
             axis_limits = (-0.75, 0.75, -0.25, 1.25)
+        if t=None:
+            interval = 100
+        else:
+            interval = 1000 * (np.max(t)-np.min(t)) / len(t)
 
         self.trajectory = trajectory
         self.axis_limits = axis_limits
@@ -104,7 +108,7 @@ class TrajectoryAnimation:
         self.ani = animation.FuncAnimation(self.fig,
                                            self.update,
                                            frames=len(self.trajectory[0]),
-                                           interval=1,
+                                           interval=interval,
                                            init_func=self.initial_plot,
                                            blit=True)
         self.ani.save(save_name)

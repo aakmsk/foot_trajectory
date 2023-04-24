@@ -7,12 +7,12 @@ setup(
     install_requires=[
         "numpy",
         "scipy",
-        "matplotlib"
+        "matplotlib",
     ],
     author="a_akmsk",
     author_email="",
     description="A foot trajectory generation library using various methods",
     license="MIT",
     keywords="robotics trajectory foot",
-    url="https://github.com/aakmsk/foot_trajectory
+    url="https://github.com/aakmsk/foot_trajectory",
 )

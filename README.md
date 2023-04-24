@@ -11,3 +11,34 @@ The `BezierFootTrajectoryGenerator` class is based on the paper ["Leg Trajectory
 ## Installation
 
 1. Clone this repository:
+```bash
+git clone https://github.com/your_username/foot_trajectory.git
+```
+
+2. Install the required dependencies:
+
+pip install -r requirements.txt
+
+python
+Copy code
+
+## Usage
+
+First, import the desired trajectory generator class:
+
+```python
+from foot_trajectory import SplineFootTrajectoryGenerator, SineFootTrajectoryGenerator, BezierFootTrajectoryGenerator
+```
+Then, create an instance of the generator and use the compute_trajectory method to generate foot trajectories:
+```python
+spline_gen = SplineFootTrajectoryGenerator()
+spline_trajectory = spline_gen.compute_trajectory()
+
+sine_gen = SineFootTrajectoryGenerator()
+sine_trajectory = sine_gen.compute_trajectory()
+
+bezier_gen = BezierFootTrajectoryGenerator()
+bezier_trajectory = bezier_gen.compute_trajectory()
+```
+License
+This project is licensed under the MIT License - see the LICENSE file for details.

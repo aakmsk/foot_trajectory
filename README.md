@@ -8,6 +8,11 @@ The `SplineFootTrajectoryGenerator` class is based on the paper ["Learning Quadr
 
 The `BezierFootTrajectoryGenerator` class is based on the paper ["Leg Trajectory Planning for Quadruped Robots with High-Speed Trot Gait"](https://www.mdpi.com/2076-3417/9/7/1508). This generator uses Bezier curves to generate foot trajectories that are optimized for high-speed trot gait.
 
+## Supported Trajectories
+1. Spline Trajectory
+2. Sine Trajectory
+3. Bezier Trajectory
+
 ## Installation 
 ```bash
 pip install git+https://github.com/aakmsk/foot_trajectory.git

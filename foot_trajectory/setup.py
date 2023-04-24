@@ -14,4 +14,5 @@ setup(
     description="A foot trajectory generation library using various methods",
     license="MIT",
     keywords="robotics trajectory foot",
+    url="https://github.com/aakmsk/foot_trajectory
 )

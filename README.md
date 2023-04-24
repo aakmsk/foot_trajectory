@@ -22,7 +22,8 @@ import numpy as np
 from foot_trajectory.foot_trajectory import (
     SplineFootTrajectoryGenerator, 
     SineFootTrajectoryGenerator, 
-    BezierFootTrajectoryGenerator
+    BezierFootTrajectoryGenerator,
+    TrajectoryAnimation
 )
 ```
 

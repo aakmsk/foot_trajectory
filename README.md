@@ -18,18 +18,24 @@ pip install git+https://github.com/aakmsk/foot_trajectory.git
 First, import the desired trajectory generator class:
 
 ```python
-from foot_trajectory import SplineFootTrajectoryGenerator, SineFootTrajectoryGenerator, BezierFootTrajectoryGenerator
+import numpy as np
+from foot_trajectory.foot_trajectory import (SplineFootTrajectoryGenerator, 
+                                             SineFootTrajectoryGenerator, 
+                                             BezierFootTrajectoryGenerator)
 ```
+
 Then, create an instance of the generator and use the compute_trajectory method to generate foot trajectories:
+
 ```python
-spline_gen = SplineFootTrajectoryGenerator()
-spline_trajectory = spline_gen.compute_trajectory()
+spline_generator = SplineFootTrajectoryGenerator(base_frequency=1.0, initial_phi=0.0)
+sine_generator = SineFootTrajectoryGenerator(base_frequency=1.0, initial_phi=0.0)
+bezier_generator = BezierFootTrajectoryGenerator(base_frequency=1.0, initial_phi=0.0)
 
-sine_gen = SineFootTrajectoryGenerator()
-sine_trajectory = sine_gen.compute_trajectory()
+t = np.linspace(0, 2 * np.pi, 100)
 
-bezier_gen = BezierFootTrajectoryGenerator()
-bezier_trajectory = bezier_gen.compute_trajectory()
+spline_trajectory = spline_generator.compute_trajectory(t, frequency_offset=0, width=1, height=1)
+sine_trajectory = sine_generator.compute_trajectory(t, frequency_offset=0, width=1, height=1)
+bezier_trajectory = bezier_generator.compute_trajectory(t, frequency_offset=0, width=1, height=1)  
 ```
 License
 This project is licensed under the MIT License - see the LICENSE file for details.

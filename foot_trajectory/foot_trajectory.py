@@ -9,7 +9,7 @@ class FootTrajectoryGenerator:
         self.initial_phi = initial_phi
 
     def _compute_phi(self, time, frequency_offset):
-        return np.mod(self.initial_phi + (self.base_frequency + frequency_offset) * time, 2 * np.pi)
+        return np.mod(self.initial_phi + 2 * np.pi * (self.base_frequency + frequency_offset) * time, 2 * np.pi)
 
     def compute_trajectory(self, time, **kwargs):
         pass

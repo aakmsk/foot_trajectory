@@ -1,3 +1,5 @@
+![foot_trajectory_logo](https://raw.githubusercontent.com/aakmsk/foot_trajectory/main/images/foot_trajectory_logo.png)
+
 # Foot Trajectory Library
 
 This library contains different foot trajectory generator classes for quadruped robots. It includes SplineFootTrajectoryGenerator, SineFootTrajectoryGenerator, and BezierFootTrajectoryGenerator.

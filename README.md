@@ -19,9 +19,11 @@ First, import the desired trajectory generator class:
 
 ```python
 import numpy as np
-from foot_trajectory.foot_trajectory import (SplineFootTrajectoryGenerator, 
-                                             SineFootTrajectoryGenerator, 
-                                             BezierFootTrajectoryGenerator)
+from foot_trajectory.foot_trajectory import (
+    SplineFootTrajectoryGenerator, 
+    SineFootTrajectoryGenerator, 
+    BezierFootTrajectoryGenerator
+)
 ```
 
 Then, create an instance of the generator and use the compute_trajectory method to generate foot trajectories:
@@ -36,6 +38,10 @@ t = np.linspace(0, 2 * np.pi, 100)
 spline_trajectory = spline_generator.compute_trajectory(t, frequency_offset=0, width=1, height=1)
 sine_trajectory = sine_generator.compute_trajectory(t, frequency_offset=0, width=1, height=1)
 bezier_trajectory = bezier_generator.compute_trajectory(t, frequency_offset=0, width=1, height=1)  
+```
+This is a method of saving the trajectory of a movement as an animation.
+```python
+animation = TrajectoryAnimation(spline_trajectory, save_name="spline_trajectory.gif")
 ```
 License
 This project is licensed under the MIT License - see the LICENSE file for details.

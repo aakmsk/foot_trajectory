@@ -12,15 +12,14 @@ The `BezierFootTrajectoryGenerator` class is based on the paper ["Leg Trajectory
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/your_username/foot_trajectory.git
+git clone https://github.com/a_akmsk/foot_trajectory.git
 ```
 
-2. Install the required dependencies:
-
-pip install -r requirements.txt
-
-python
-Copy code
+2. Install 
+```bash
+cd foot_trajectory
+pip install -e .
+```
 
 ## Usage
 
